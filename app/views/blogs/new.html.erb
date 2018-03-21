@@ -6,5 +6,7 @@
 	<%= f.text_area :body %>
 <p>カテゴリー</p>
 	<%= f.text_field :category %>
-	<%= f.submit %>
+<p>画像</p>
+<%= f.attachment_field :blog_image %>
+<%= f.submit %>
 <% end %>

@@ -44,7 +44,7 @@
           <section class="blog-text">
             <h3 class="blog-text-headline">
               <!-- #ここにタイトルを表示 -->
-              <%= link_to blog.title, "/blogs/#{blog.id}" %>
+              <%= link_to blog.title, blog_path(blog.id) %>
              <!--  #一番目に表示名、二番目にurl -->
             </h3>
             <p class="blog-date">
@@ -53,6 +53,8 @@
             <span class="category"><%= blog.category %></span>
           </section>
         </div>
+<!--         <%= attachment_image_tag blog, :blog_image, class: "blog-image" %> -->
+        <%= attachment_image_tag blog, :blog_image, :fill, 100, 100, format: 'jpeg' %>
         <% end %>
 
         <!-- ここまで -->
